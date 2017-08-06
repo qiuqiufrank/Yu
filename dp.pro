@@ -1,5 +1,6 @@
 QT       += core gui widgets
-TRANSLATIONS = dp_cn.ts
+TRANSLATIONS = dp_cn.ts \
+                dp_en.ts
 
 TARGET = doublePendulumn
 TEMPLATE = app

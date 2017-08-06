@@ -49,6 +49,10 @@ private slots:
     void drawPath2();
     void drawAllPaths();
     void closePath();
+    void setCN();
+    void setEN();
+    void displayAboutQt();
+    void displayAboutAuthor();
 private:
     QKeyEvent *ke;
     MainWidget *openglWidget;
@@ -74,6 +78,11 @@ private:
     QAction *ball2PathAction;
     QAction *ballAllPathAction;
     QAction *ballClosePath;
+    QAction *aboutQtAction;
+    QAction *aboutAuthorAction;
+    QAction *languageAction;
+    QAction *cnAction;
+    QAction *enAction;
 
 //    QPushButton *stopButton;
     QVBoxLayout * operateLayout;
@@ -83,6 +92,8 @@ private:
     QMenu *fileMenu;
     QMenu *preferenceMenu;
     QMenu *ballPathMenu;
+    QMenu *helpMenu;
+    QMenu *langMenu;
     QTimer *timer;
     QTimer *initTimer;
 

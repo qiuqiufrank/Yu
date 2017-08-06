@@ -56,7 +56,22 @@ MainWindow::MainWindow()
     connect(ballAllPathAction,SIGNAL(triggered(bool)),this,SLOT(drawAllPaths()));
     connect(ballClosePath,SIGNAL(triggered(bool)),this,SLOT(closePath()));
 
+    connect(enAction,SIGNAL(triggered(bool)),this,SLOT(setEN()));
+    connect(cnAction,SIGNAL(triggered(bool)),this,SLOT(setCN()));
 
+    connect(aboutQtAction,SIGNAL(triggered(bool)),this,SLOT(displayAboutQt()));
+    connect(aboutAuthorAction,SIGNAL(triggered(bool)),this,SLOT(displayAboutAuthor()));
+
+
+
+}
+
+void MainWindow::displayAboutQt(){
+     QMessageBox::aboutQt(0,"");
+}
+
+void MainWindow::displayAboutAuthor(){
+    QMessageBox::about(0,tr("author"),tr("if you want to discuss double pendulum with the author, please send an email via 2298096612@qq.com"));
 }
 
 void MainWindow::grabScreen(){
@@ -82,6 +97,28 @@ void MainWindow::drawPath2()
     openglWidget->rb2=vb2;
     openglWidget->update();
 
+}
+
+void MainWindow::setEN()
+{
+
+      QFile file("language");
+      if (!file.open(QIODevice::WriteOnly | QIODevice::Text))
+          return;
+
+      QTextStream out(&file);
+      out << "default:" << "en"<< "\n";
+}
+
+void MainWindow::setCN()
+{
+
+      QFile file("language");
+      if (!file.open(QIODevice::WriteOnly | QIODevice::Text))
+          return;
+
+      QTextStream out(&file);
+      out << "default:" << "cn"<< "\n";
 }
 
 void MainWindow::drawAllPaths()
@@ -411,11 +448,24 @@ void MainWindow::createMenu(){
 
    preferenceMenu=new QMenu(tr("Preference"));
    fontAction=new QAction(tr("font"));
+   languageAction=new QAction(tr("language"));
    preferenceMenu->addAction(fontAction);
+   preferenceMenu->addAction(languageAction);
+
+
+
+   langMenu=new QMenu();
+   enAction=new QAction("english");
+   cnAction=new QAction("中文");
+   langMenu->addAction(enAction);
+   langMenu->addAction(cnAction);
+   languageAction->setMenu(langMenu);
+
+
    preferenceMenu->addAction(imagePathAction);
    preferenceMenu->addAction(closeColorAction);
 
-   ballPathMenu=new QMenu(tr("ballPath"));
+   ballPathMenu=new QMenu(tr("BallPath"));
    ball1PathAction=new QAction(tr("ball1"));
    ball2PathAction=new QAction(tr("ball2"));
    ballAllPathAction=new QAction(tr("all"));
@@ -425,10 +475,18 @@ void MainWindow::createMenu(){
    ballPathMenu->addAction(ballAllPathAction);
    ballPathMenu->addAction(ballClosePath);
 
+   helpMenu=new QMenu(tr("Help"));
+   aboutQtAction =new QAction(tr("about Qt"));
+   aboutAuthorAction =new QAction(tr("about Author"));
+   helpMenu->addAction(aboutQtAction);
+   helpMenu->addAction(aboutAuthorAction);
 
    menuBar->addMenu(fileMenu);
    menuBar->addMenu(preferenceMenu);
    menuBar->addMenu(ballPathMenu);
+   menuBar->addMenu(helpMenu);
+
+
 
 }
 
@@ -470,9 +528,6 @@ void MainWindow::creatOperations(){
                                          0.00,0.00,1.00,
                                          1.00,2.00,2.00,
                                          60.00,10.00};
-
-
-
 
     int num=0;
     for(int i=0;i<7;i++){
