@@ -13,7 +13,7 @@ like it.
 Yu is created by Qt+OpenGL+GSL.Basicall you can use it on most computer system.
 by compiling source.There are two kinds of binary distribtions already compiled.
 [window x86_64 download](https://github.com/qiuqiufrank/Yu/raw/master/downloads/windows_x86_64/Yu_windows_x86.zip)
-[debian x86_64 [download](https://github.com/qiuqiufrank/Yu/raw/master/downloads/windows_x86_64/Yu_windows_x86.zip)
+[debian x86_64 download](https://github.com/qiuqiufrank/Yu/raw/master/downloads/windows_x86_64/Yu_windows_x86.zip)
 
 ## Simple Guide ##
 
