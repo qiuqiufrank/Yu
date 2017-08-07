@@ -12,8 +12,8 @@ like it.
 ## Distribution ##
 Yu is created by Qt+OpenGL+GSL.Basicall you can use it on most computer system.
 by compiling source.There are two kinds of binary distribtions already compiled.
-###window x86_64 [download](http://ternjs.net/doc/manual.html#plugins)
-###debian x86_64 [download](http://ternjs.net/doc/manual.html#plugins)
+###window x86_64 [download](https://github.com/qiuqiufrank/Yu/tree/master/downloads/windows_x86_64)
+###debian x86_64 [download](https://github.com/qiuqiufrank/Yu/tree/master/downloads/windows_x86_64)
 
 ## Simple Guide ##
 
