@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="en_US">
+<TS version="2.0" language="en_US">
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="mainwindow.cpp" line="36"/>
         <source>Double Pendulum</source>
-        <translation type="unfinished">Double Pendulum</translation>
+        <translation type="obsolete">Double Pendulum</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="36"/>
+        <source>Yu</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="74"/>
@@ -70,9 +74,9 @@
     </message>
     <message>
         <location filename="mainwindow.cpp" line="468"/>
-        <source>BallPath</source>
-        <oldsource>ballPath</oldsource>
-        <translation type="unfinished">ball path</translation>
+        <source>Path</source>
+        <oldsource>BallPath</oldsource>
+        <translation type="unfinished">Path</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="469"/>

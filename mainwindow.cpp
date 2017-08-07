@@ -33,7 +33,7 @@ MainWindow::MainWindow()
     addToolBar(Qt::RightToolBarArea,toolBar);
 
     setCentralWidget(openglWidget);
-    setWindowTitle(tr("Double Pendulum"));
+    setWindowTitle(tr("Yu"));
     setFont(QFont("freesans",13));
 
     timer=new QTimer(this);
@@ -465,7 +465,7 @@ void MainWindow::createMenu(){
    preferenceMenu->addAction(imagePathAction);
    preferenceMenu->addAction(closeColorAction);
 
-   ballPathMenu=new QMenu(tr("BallPath"));
+   ballPathMenu=new QMenu(tr("Path"));
    ball1PathAction=new QAction(tr("ball1"));
    ball2PathAction=new QAction(tr("ball2"));
    ballAllPathAction=new QAction(tr("all"));
