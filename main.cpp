@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 //    translator.load(":/dp_cn.qm");
 
 
-      QFile file("language");
+      QFile file(":/language");
       if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
           return 0;
 
@@ -20,11 +20,11 @@ int main(int argc, char *argv[])
           line = in.readLine();
       }
       if(line=="default:en"){
-          translator.load("/home/qiu/Documents/c++/dp/dp_en.qm");
+          translator.load(":/dp_en.qm");
           a.installTranslator(&translator);
       }
       else if(line=="default:cn"){
-          translator.load("/home/qiu/Documents/c++/dp/dp_cn.qm");
+          translator.load(":/dp_cn.qm");
           a.installTranslator(&translator);
       }
 
